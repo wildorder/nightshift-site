@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nightshift — a control plane for code written by agents</title>
+    <title>Nightshift: go to bed with a plan, wake up to verified commits</title>
     <meta
       name="description"
-      content="Plan a program with Nightshift until the choices left are cheap, then let it run unattended. Every job verified on the real head before it lands."
+      content="Nightshift runs Claude Code and Codex overnight, in parallel, and lands only the work that passes your tests on the real branch. Open source. Runs on your machine."
     />
-    <meta property="og:title" content="Nightshift" />
+    <meta property="og:title" content="Nightshift: wake up to verified commits" />
     <meta
       property="og:description"
-      content="A control plane for code written by agents: planned with you, run unattended, verified before it lands."
+      content="Your agents work overnight. Nothing lands unless it passes your tests on the real branch."
     />
     <meta property="og:url" content="https://nightshift.wildorder.dev/" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -21,6 +21,7 @@
     <header class="top">
       <a class="mark" href="/">Nightshift</a>
       <nav>
+        <a href="#why">Why</a>
         <a href="#how">How it works</a>
         <a href="#start">Quick start</a>
         <a href="https://github.com/wildorder/nightshift">GitHub</a>
@@ -29,59 +30,113 @@
 
     <main>
       <section class="hero">
-        <h1>A control plane for code written by agents.</h1>
+        <h1>Go to bed with a plan. Wake up to verified commits.</h1>
         <p class="lede">
-          Plan a program with Nightshift until the choices left are the cheap ones. Then it runs
-          unattended, and nothing lands until Nightshift has verified it.
+          Nightshift runs Claude Code and Codex overnight, in parallel, and lands only the work
+          that passes your tests on the real branch. No pile of pull requests to triage in the
+          morning. No agent's word taken for "done".
         </p>
         <p class="actions">
-          <a class="button" href="#start">Run it locally</a>
-          <a class="button secondary" href="https://github.com/wildorder/nightshift">Read the code</a>
+          <a class="button" href="#start">Run it on your machine</a>
+          <a class="button secondary" href="https://github.com/wildorder/nightshift">Read the source</a>
         </p>
+        <p class="proof">Open source · Apache-2.0 · Runs locally · Claude Code and Codex</p>
       </section>
 
       <section class="demo" aria-label="Demo">
         <!-- A short recording of a run in the Studio goes here: demo.mp4, with a poster frame. -->
         <div class="demo-frame">
-          <p>A run, watched live in the Studio.</p>
+          <p>A night's run, watched live in the Studio.</p>
         </div>
       </section>
 
-      <section id="how" class="features">
+      <section id="why" class="problem">
+        <h2>Writing code got cheap. Checking it didn't.</h2>
+        <p>
+          Agents can produce a week of changes in a night. Then you spend the next day finding out
+          which of them are real: the tests that were quietly deleted, the fix that works only on a
+          stale branch, the confident summary of work that never passed. More agents just make
+          that queue longer.
+        </p>
+        <p>Nightshift moves the checking to before anything lands, so the morning starts with results.</p>
+      </section>
+
+      <section class="features">
         <article>
-          <h2>Planned with you</h2>
+          <h2>Agents don't mark their own homework</h2>
           <p>
-            A plan and a contract, written together: the outcomes, the seams, the decisions that
-            are expensive to reverse, and the human steps hoisted to before the run. A
-            deterministic check says when it is ready.
+            Every change is built and tested in a clean checkout of the real branch head, after
+            everything that landed before it. The agent's claim is recorded. Your tests decide.
           </p>
         </article>
         <article>
-          <h2>Verified before it lands</h2>
+          <h2>A second opinion from a different model</h2>
           <p>
-            Every job works in its own git worktree. An agent saying it is done is not the same as
-            the work being right, so each change is verified on the real head of the branch and
-            lands as a commit Nightshift owns.
+            Risky work is examined by another provider's model before it lands, because one model
+            reviewing itself shares its own blind spots. When they disagree, a ruling settles it,
+            on the record.
           </p>
         </article>
         <article>
-          <h2>Routed and examined by risk</h2>
+          <h2>Frontier spend only where it matters</h2>
           <p>
-            Cheap, well-tested jobs go to cheap models. Risky ones are examined by a different
-            provider's model before they land, and a disagreement ends in a ruling.
+            Small, well-tested jobs go to cheap models and climb only when they fail. A budget stops
+            new work before an overnight run turns into a surprise bill.
           </p>
         </article>
         <article>
-          <h2>Every decision on the record</h2>
+          <h2>Know why every line is there</h2>
           <p>
-            Each choice is recorded with the alternatives it beat and the commits it produced.
-            Reverse one, and the correction is planned from the record.
+            Each decision is kept with the options it beat and the commits it produced. Disagree
+            with one in the morning, reverse it, and the fix is planned from the record.
+          </p>
+        </article>
+        <article>
+          <h2>Decide the expensive things. Delegate the rest.</h2>
+          <p>
+            You plan with Nightshift until only cheap choices are left, and every credential or
+            human step is done up front. The run doesn't stop at 3 a.m. to ask you something.
+          </p>
+        </article>
+        <article>
+          <h2>Nothing touches your branch but Nightshift</h2>
+          <p>
+            Agents work in isolated worktrees and never commit. Nightshift owns every commit and
+            lands them one at a time, so parallel work can't collide on your branch.
           </p>
         </article>
       </section>
 
+      <section id="how" class="steps">
+        <h2>One evening of planning, one night of work</h2>
+        <ol>
+          <li>
+            <strong>Plan it together.</strong> A short plan and a contract: the outcomes, the seams,
+            the decisions that would be costly to get wrong.
+          </li>
+          <li><strong>Ratify it.</strong> A deterministic check says when it's ready to run unattended.</li>
+          <li>
+            <strong>Let it run.</strong> Parallel agents, each change verified before it lands. Watch
+            it live in the Studio, or go to sleep.
+          </li>
+          <li>
+            <strong>Read the report.</strong> What landed, what's waiting on you and why, what it
+            cost, and every decision behind it.
+          </li>
+        </ol>
+      </section>
+
+      <section class="limits">
+        <h2>What it doesn't do</h2>
+        <ul>
+          <li>It won't make a bad test suite trustworthy. Nightshift is only as strict as your checks.</li>
+          <li>It doesn't host your agents yet. Runs use your machine and your own Claude or Codex subscription.</li>
+          <li>It doesn't replace reading the code that matters. It makes sure that what you read has already passed.</li>
+        </ul>
+      </section>
+
       <section id="start" class="start">
-        <h2>Quick start</h2>
+        <h2>Run it tonight</h2>
         <p>Node 24, git, and Claude Code or Codex signed in. No cloud account.</p>
         <pre><code>git clone https://github.com/wildorder/nightshift.git &amp;&amp; cd nightshift
 npm ci &amp;&amp; npm run build
@@ -96,10 +151,10 @@ nightshift local        # the control plane and the Studio, on this machine</cod
       </section>
 
       <section class="built">
-        <h2>How it is built</h2>
+        <h2>Built in the open, the way it runs</h2>
         <p>
-          A TypeScript monorepo with its layering enforced by tests, a control plane on AWS in CDK,
-          and every program's contract, decisions and as-built in the repository. Start with the
+          Every program that built Nightshift has its contract, its decisions and what actually got
+          built in the repository. Start with the
           <a href="https://github.com/wildorder/nightshift/blob/main/docs/vision.md">vision</a>, the
           <a href="https://github.com/wildorder/nightshift/blob/main/docs/architecture.md">architecture</a>
           and the

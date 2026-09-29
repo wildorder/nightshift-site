@@ -182,3 +182,59 @@ footer {
   padding: 8rem 1.5rem;
   text-align: center;
 }
+
+.proof {
+  margin-top: 1.25rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+}
+
+.problem {
+  padding: 3.5rem 0 0;
+  max-width: 44rem;
+}
+.problem h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  letter-spacing: -0.01em;
+}
+.problem p {
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+.problem p:last-child {
+  color: var(--text);
+}
+
+.steps {
+  padding: 1rem 0 2.5rem;
+}
+.steps h2,
+.limits h2 {
+  margin-top: 0;
+}
+.steps ol {
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.6rem;
+  max-width: 44rem;
+}
+.steps li {
+  color: var(--muted);
+}
+.steps strong {
+  color: var(--text);
+}
+
+.limits {
+  padding: 0 0 2.5rem;
+  max-width: 44rem;
+}
+.limits ul {
+  padding-left: 1.25rem;
+  color: var(--muted);
+  display: grid;
+  gap: 0.4rem;
+}
