@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nightshift — a control plane for code written by agents</title>
+    <meta
+      name="description"
+      content="Plan a program with Nightshift until the choices left are cheap, then let it run unattended. Every job verified on the real head before it lands."
+    />
+    <meta property="og:title" content="Nightshift" />
+    <meta
+      property="og:description"
+      content="A control plane for code written by agents: planned with you, run unattended, verified before it lands."
+    />
+    <meta property="og:url" content="https://nightshift.wildorder.dev/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="mark" href="/">Nightshift</a>
+      <nav>
+        <a href="#how">How it works</a>
+        <a href="#start">Quick start</a>
+        <a href="https://github.com/wildorder/nightshift">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>A control plane for code written by agents.</h1>
+        <p class="lede">
+          Plan a program with Nightshift until the choices left are the cheap ones. Then it runs
+          unattended, and nothing lands until Nightshift has verified it.
+        </p>
+        <p class="actions">
+          <a class="button" href="#start">Run it locally</a>
+          <a class="button secondary" href="https://github.com/wildorder/nightshift">Read the code</a>
+        </p>
+      </section>
+
+      <section class="demo" aria-label="Demo">
+        <!-- A short recording of a run in the Studio goes here: demo.mp4, with a poster frame. -->
+        <div class="demo-frame">
+          <p>A run, watched live in the Studio.</p>
+        </div>
+      </section>
+
+      <section id="how" class="features">
+        <article>
+          <h2>Planned with you</h2>
+          <p>
+            A plan and a contract, written together: the outcomes, the seams, the decisions that
+            are expensive to reverse, and the human steps hoisted to before the run. A
+            deterministic check says when it is ready.
+          </p>
+        </article>
+        <article>
+          <h2>Verified before it lands</h2>
+          <p>
+            Every job works in its own git worktree. An agent saying it is done is not the same as
+            the work being right, so each change is verified on the real head of the branch and
+            lands as a commit Nightshift owns.
+          </p>
+        </article>
+        <article>
+          <h2>Routed and examined by risk</h2>
+          <p>
+            Cheap, well-tested jobs go to cheap models. Risky ones are examined by a different
+            provider's model before they land, and a disagreement ends in a ruling.
+          </p>
+        </article>
+        <article>
+          <h2>Every decision on the record</h2>
+          <p>
+            Each choice is recorded with the alternatives it beat and the commits it produced.
+            Reverse one, and the correction is planned from the record.
+          </p>
+        </article>
+      </section>
+
+      <section id="start" class="start">
+        <h2>Quick start</h2>
+        <p>Node 24, git, and Claude Code or Codex signed in. No cloud account.</p>
+        <pre><code>git clone https://github.com/wildorder/nightshift.git &amp;&amp; cd nightshift
+npm ci &amp;&amp; npm run build
+(cd apps/cli &amp;&amp; npm link)
+
+nightshift local        # the control plane and the Studio, on this machine</code></pre>
+        <p>
+          Then <code>nightshift init</code> in a repository of yours, plan with
+          <code>/plan-program</code> in Claude Code, and <code>nightshift run</code>. The
+          <a href="https://github.com/wildorder/nightshift#readme">README</a> has the rest.
+        </p>
+      </section>
+
+      <section class="built">
+        <h2>How it is built</h2>
+        <p>
+          A TypeScript monorepo with its layering enforced by tests, a control plane on AWS in CDK,
+          and every program's contract, decisions and as-built in the repository. Start with the
+          <a href="https://github.com/wildorder/nightshift/blob/main/docs/vision.md">vision</a>, the
+          <a href="https://github.com/wildorder/nightshift/blob/main/docs/architecture.md">architecture</a>
+          and the
+          <a href="https://github.com/wildorder/nightshift/tree/main/docs/programs">programs</a>.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Apache-2.0 · WildOrder ·
+        <a href="https://github.com/wildorder/nightshift">github.com/wildorder/nightshift</a>
+      </p>
+    </footer>
+  </body>
+</html>

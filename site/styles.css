@@ -1,0 +1,184 @@
+:root {
+  --bg: #0b1020;
+  --panel: #121a30;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #a5b4fc;
+  --line: #1e293b;
+  --max: 64rem;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font:
+    17px / 1.6 ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+}
+
+a {
+  color: var(--accent);
+}
+a:hover {
+  color: #c7d2fe;
+}
+
+.top,
+main,
+footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.mark {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+.top nav {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.95rem;
+}
+.top nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.top nav a:hover {
+  color: var(--text);
+}
+
+.hero {
+  padding: 4rem 0 2.5rem;
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+  max-width: 18ch;
+}
+.lede {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 40rem;
+}
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.65rem 1.1rem;
+  border-radius: 0.5rem;
+  background: var(--accent);
+  color: #0b1020;
+  font-weight: 600;
+  text-decoration: none;
+}
+.button:hover {
+  background: #c7d2fe;
+  color: #0b1020;
+}
+.button.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+.button.secondary:hover {
+  border-color: var(--muted);
+}
+
+.demo-frame {
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: var(--panel);
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1.25rem;
+  padding: 3.5rem 0;
+}
+.features article {
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  background: var(--panel);
+}
+.features h2 {
+  font-size: 1.05rem;
+  margin: 0 0 0.5rem;
+}
+.features p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+
+.start,
+.built {
+  padding: 1.5rem 0 2.5rem;
+}
+.start h2,
+.built h2 {
+  margin-top: 0;
+}
+pre {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-size: 0.92rem;
+}
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+p code {
+  background: var(--panel);
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.3rem;
+  font-size: 0.9em;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.notfound {
+  padding: 8rem 1.5rem;
+  text-align: center;
+}

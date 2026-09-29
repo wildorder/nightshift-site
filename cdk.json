@@ -1,0 +1,12 @@
+{
+  "//": "The app is compiled JavaScript; `npm run synth` builds first. hostedZoneId is the nightshift.wildorder.dev zone, owned by the nightshift repository's nightshift-dns stack; it is read by id so the two repositories share no CloudFormation exports.",
+  "app": "node dist/bin/app.js",
+  "output": "cdk.out",
+  "context": {
+    "hostedZoneId": "Z02263141ZW4XX8TRHGR1",
+    "@aws-cdk/aws-s3:publicAccessBlockedByDefault": true,
+    "@aws-cdk/aws-cloudfront:defaultFunctionRuntimeV2_0": true,
+    "@aws-cdk/core:explicitStackTags": true,
+    "@aws-cdk/core:validateSnapshotRemovalPolicy": true
+  }
+}
