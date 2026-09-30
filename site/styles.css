@@ -70,6 +70,34 @@ footer {
 
 .hero {
   padding: 4rem 0 2.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+    padding-top: 2.5rem;
+  }
+}
+/* On a phone the nav keeps GitHub only; the page never scrolls sideways. */
+@media (max-width: 640px) {
+  .top nav a:not([href^="https://"]) {
+    display: none;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+main,
+.hero-copy,
+.status-card {
+  min-width: 0;
+}
+.hero-copy {
+  overflow-wrap: break-word;
 }
 .hero h1 {
   font-size: clamp(2.2rem, 5vw, 3.4rem);
@@ -237,4 +265,131 @@ footer {
   color: var(--muted);
   display: grid;
   gap: 0.4rem;
+}
+
+/* The hero's status card: a replica of the Studio's program status. */
+.status-card {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background: var(--panel);
+  padding: 1.25rem 1.35rem 1rem;
+  box-shadow:
+    0 24px 60px -24px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(165, 180, 252, 0.06);
+  font-size: 0.92rem;
+}
+.status-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.status-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.02rem;
+}
+.status-meta {
+  margin: 0.15rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.status-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem 1rem;
+  margin: 1.1rem 0;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+}
+.stat b {
+  white-space: nowrap;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.stat.strong {
+  color: var(--text);
+}
+.dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  flex: none;
+}
+.dot.success {
+  background: #4ade80;
+}
+.dot.warning {
+  background: #fbbf24;
+}
+.dot.danger {
+  background: #f87171;
+}
+.dot.neutral {
+  background: #94a3b8;
+}
+.badge {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: 0.35rem;
+  font:
+    500 0.74rem / 1.5 ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+  white-space: nowrap;
+}
+.badge.success {
+  background: rgba(74, 222, 128, 0.14);
+  color: #86efac;
+}
+.badge.warning {
+  background: rgba(251, 191, 36, 0.14);
+  color: #fcd34d;
+}
+.status-waiting,
+.status-lines {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.status-waiting li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+.status-waiting .muted {
+  color: var(--muted);
+}
+.status-lines {
+  margin-top: 0.9rem;
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+.glyph {
+  display: inline-block;
+  width: 1.25rem;
+  color: var(--accent);
+}
+.status-card figcaption {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+@media (max-width: 520px) {
+  .status-stats {
+    grid-template-columns: 1fr;
+  }
 }

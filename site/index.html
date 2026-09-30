@@ -30,17 +30,49 @@
 
     <main>
       <section class="hero">
-        <h1>Go to bed with a plan. Wake up to verified commits.</h1>
-        <p class="lede">
-          Nightshift runs Claude Code and Codex overnight, in parallel, and lands only the work
-          that passes your tests on the real branch. No pile of pull requests to triage in the
-          morning. No agent's word taken for "done".
-        </p>
-        <p class="actions">
-          <a class="button" href="#start">Run it on your machine</a>
-          <a class="button secondary" href="https://github.com/wildorder/nightshift">Read the source</a>
-        </p>
-        <p class="proof">Open source · Apache-2.0 · Runs locally · Claude Code and Codex</p>
+        <div class="hero-copy">
+          <h1>Go to bed with a plan. Wake up to verified commits.</h1>
+          <p class="lede">
+            Nightshift runs Claude Code and Codex overnight, in parallel, and lands only the work
+            that passes your tests on the real branch. No pile of pull requests to triage in the
+            morning. No agent's word taken for "done".
+          </p>
+          <p class="actions">
+            <a class="button" href="#start">Run it on your machine</a>
+            <a class="button secondary" href="https://github.com/wildorder/nightshift">Read the source</a>
+          </p>
+          <p class="proof">Open source · Apache-2.0 · Runs locally · Claude Code and Codex</p>
+        </div>
+
+        <figure class="status-card" aria-label="A program's status in the Studio, the morning after a run">
+          <div class="status-head">
+            <div>
+              <p class="status-title">Add tenant-aware billing</p>
+              <p class="status-meta">Overnight run · 6h 12m · finished 04:12</p>
+            </div>
+            <span class="badge success">succeeded</span>
+          </div>
+          <div class="status-stats">
+            <span class="stat"><span class="dot success"></span><b>11/11</b> landed</span>
+            <span class="stat strong"><span class="dot warning"></span><b>1</b> waiting on you</span>
+            <span class="stat"><span class="dot danger"></span><b>0</b> failed</span>
+            <span class="stat"><span class="dot neutral"></span><b>$14.20</b> of a $25 budget</span>
+          </div>
+          <ul class="status-waiting">
+            <li>
+              <span class="badge warning">prerequisite</span>
+              <b>HP-01</b>
+              <span class="muted">The Stripe webhook secret, before the webhook checks can run</span>
+            </li>
+          </ul>
+          <ul class="status-lines">
+            <li><span class="glyph">✓</span>Every commit verified on main before it landed</li>
+            <li><span class="glyph">⤺</span>1 job retried on a stronger model after its tests failed</li>
+            <li><span class="glyph">◎</span>3 changes examined by a second model · 0 blocking findings</li>
+            <li><span class="glyph">⑂</span>7 decisions recorded, each with the commits it produced</li>
+          </ul>
+          <figcaption>The Studio's status for a program, the morning after. Illustrative.</figcaption>
+        </figure>
       </section>
 
       <section class="demo" aria-label="Demo">
